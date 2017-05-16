@@ -18,7 +18,6 @@ def initialize(job):
     "Inialize the simulation"
 
     with job:
-        import pdb; pdb.set_trace()
         water = mb.load(os.path.join(job._project.root_directory(), 'scripts/util/lib/tip3p.mol2'))
         water.name = 'tip3p'
         n_water = job.statepoint()['n_water']

@@ -2,6 +2,20 @@ Template for MoSDeF- and GROMACS-centric project managed with signac
 
 See [generic signac template](https://github.com/glotzerlab/signac-project-template) and [a fork](https://github.com/summeraz/monolayer_screening)
 
+# Installation
+
+Install these packages:
+
+* [block_avg](https://github.com/tcmoore3/block_avg)
+* [mtools](https://github.com/mattwthompson/mtools)
+
+Install other dependencies:
+
+```
+python setup.py install
+```
+
+
 # Get started:
 
 Initialize project:
@@ -31,4 +45,10 @@ At any time you can evaluate the status of each job with:
 python gromacs_signac_template/status.py -d
 ```
 
-Sample analysis coming soon ...
+Analyze system (here, simple timeseries plots of density)
+
+```
+python analysis/calc_density.py
+```
+
+Look at the PDF file located in the ```workspace``` directory.

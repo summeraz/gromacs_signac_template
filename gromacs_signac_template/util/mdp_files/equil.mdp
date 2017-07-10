@@ -19,9 +19,13 @@ fourierspacing      = 0.16
 
 gen_vel             = no
 
-tcoupl              = v-rescale
+tcoupl              = berendsen
 tc-grps             = System
 tau_t               = 1
 ref_t               = 300
 
-pcoupl              = no
+pcoupl              = berendsen
+pcoupltype          = isotropic
+tau_p               = 1
+ref_p               = 1
+compressibility     = 4.5e-5

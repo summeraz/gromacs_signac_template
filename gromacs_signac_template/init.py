@@ -11,15 +11,13 @@ import signac
 import numpy as np
 
 
-def main(args, random_seed):
-    project = signac.init_project('WaterBenchmark')
+def main(args):
+    project = signac.init_project('Alkanes')
     statepoints_init = []
-    for n_water in [1000, 2000, 3000]:
+    for C_n in [6, 8, 10]:
         statepoint = dict(
-                    # number of water molecules
-                    n_water = n_water,
-                    # random seed
-                    seed = random_seed)
+                    # length of alkane
+                    C_n = C_n)
         project.open_job(statepoint).init()
         statepoints_init.append(statepoint)
 
@@ -31,21 +29,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="Initialize the data space.")
     parser.add_argument(
-        'random',
-        type=str,
-        help="A string to generate a random seed.")
-    parser.add_argument(
         '-n', '--num-replicas',
         type=int,
         default=1,
         help="Initialize multiple replications.")
     args = parser.parse_args()
 
-    # Generate an integer from the random str.
-    try:
-        random_seed = int(args.random)
-    except ValueError:
-        random_seed = int(sha1(args.random.encode()).hexdigest(), 16) % (10 ** 8)
-
     logging.basicConfig(level=logging.INFO)
-    main(args, random_seed)
+    main(args)

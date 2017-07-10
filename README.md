@@ -7,7 +7,7 @@ See [generic signac template](https://github.com/glotzerlab/signac-project-templ
 Initialize project:
 
 ```
-python gromacs_signac_template/init.py 654
+python gromacs_signac_template/init.py
 ```
 
 Build systems and perform energy minimization:
@@ -18,10 +18,17 @@ python scripts/run.py minimize
 ```
 
 Submit equilibration and production runs to the cluster
+(can also be done locally as above)
 
 ```
-python gromacs_signac_template/submit.py -j equilibrate
-python gromacs_signac_template/submit.py -j sample
+python submit.py -j equilibrate
+python submit.py -j sample
+```
+
+At any time you can evaluate the status of each job with:
+
+```
+python gromacs_signac_template/status.py -d
 ```
 
 Sample analysis coming soon ...

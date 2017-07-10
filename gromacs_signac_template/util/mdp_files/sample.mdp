@@ -1,6 +1,6 @@
-constraints         = h-bonds
+constraints         = none
 integrator          = md
-nsteps              = 50000000
+nsteps              = 10000000
 dt                  = 0.001
 
 nstxout             = 10000

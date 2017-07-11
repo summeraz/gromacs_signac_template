@@ -18,9 +18,7 @@ rvdw                = 1.1
 coulombtype         = PME
 fourierspacing      = 0.16
 
-gen-vel             = yes
-gen-temp            = 300
-gen-seed            = 234506
+gen-vel             = no
 
 tcoupl              = v-rescale
 tc-grps             = System

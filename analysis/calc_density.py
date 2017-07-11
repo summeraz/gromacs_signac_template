@@ -19,8 +19,8 @@ Calculates the density of a system over the length of a trajectory
 project = signac.get_project()
 
 for job in project.find_jobs():
-    top_file = os.path.join(job.workspace(), 'em.gro')
-    trj_file = os.path.join(job.workspace(), 'equil.trr')
+    top_file = os.path.join(job.workspace(), 'sample.gro')
+    trj_file = os.path.join(job.workspace(), 'sample.trr')
     data_file = os.path.join(job.workspace(), 'rho.txt')
     img_file = os.path.join(job.workspace(), 'rho.pdf')
     if os.path.isfile(top_file) and os.path.isfile(trj_file):
@@ -52,8 +52,8 @@ for job in project.find_jobs():
             pass
 
         if ba:
-            t_b, t_std = ba.block_avg(t, 10)
-            rho_b, rho_std = ba.block_avg(rho, 10)
+            t_b, t_std = ba.block_avg(t, 50)
+            rho_b, rho_std = ba.block_avg(rho, 50)
             t_b = t_b.reshape(-1)
             t_std = t_std.reshape(-1)
             rho_b = rho_b.reshape(-1)

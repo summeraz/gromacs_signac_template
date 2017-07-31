@@ -5,11 +5,7 @@ This helps to define environment specific behaviour in heterogenous
 environments.
 """
 import flow
-from flow.environment import get_environment
 from flow.environment import format_timedelta
-
-
-__all__ = ['get_environment']
 
 
 class RahmanEnvironment(flow.environment.TorqueEnvironment):

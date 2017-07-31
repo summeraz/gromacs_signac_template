@@ -6,8 +6,8 @@ import environment  # Custom environment definition
 
 def _grompp_str(root, op_name, gro_name, sys_name):
     """Helper function, returns grompp command string for operation """
-    cmd = ('gmx grompp -f {root}/scripts/util/mdp_files/{op}.mdp -c {{job.ws}}/{gro}.gro '
-           '-p {{job.ws}}/{sys}.top -o {{job.ws}}/{op}.tpr')
+    cmd = ('gmx grompp -f {root}/src/util/mdp_files/{op}.mdp -c {gro}.gro '
+           '-p {sys}.top -o {op}.tpr')
     return cmd.format(root=root, op=op_name, gro=gro_name, sys=sys_name)
 
 

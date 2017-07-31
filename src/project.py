@@ -51,12 +51,12 @@ class MyProject(FlowProject):
             post=[self.initialized])
 
         add_gromacs_op(
-            name='minimize', gro='init', sys='init',
+            name='em', gro='init', sys='init',
             pre=[self.initialized],
             post=[self.minimized])
 
         add_gromacs_op(
-            name='equilibrate', gro='em', sys='init',
+            name='equil', gro='em', sys='init',
             pre=[self.minimized],
             post=[self.equilibrated])
 

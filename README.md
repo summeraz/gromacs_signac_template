@@ -21,28 +21,28 @@ python setup.py install
 Initialize project:
 
 ```
-python gromacs_signac_template/init.py
+python src/init.py
 ```
 
 Build systems and perform energy minimization:
 
 ```
-python scripts/run.py initialize
-python scripts/run.py minimize
+python src/project.py run initialize
+python src/project.py run em  # energy minimization
 ```
 
 Submit equilibration and production runs to the cluster
-(can also be done locally as above)
+(can also be run locally as above)
 
 ```
-python submit.py -j equilibrate
-python submit.py -j sample
+python src/project.py submit -o equil
+python src/project.py submit -o sample
 ```
 
 At any time you can evaluate the status of each job with:
 
 ```
-python gromacs_signac_template/status.py -d
+python src/project.py status -d
 ```
 
 Analyze system (here, simple timeseries plots of density)

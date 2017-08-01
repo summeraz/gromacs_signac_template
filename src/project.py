@@ -35,7 +35,7 @@ class MyProject(FlowProject):
         return job.isfile('sample.gro')
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(MyProject, self).__init__(*args, **kwargs)
 
         def add_gromacs_op(name, gro, sys, **kwargs):
             self.add_operation(

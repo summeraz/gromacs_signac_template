@@ -40,7 +40,7 @@ class MyProject(FlowProject):
         def add_gromacs_op(name, gro, sys, **kwargs):
             self.add_operation(
                 name=name,
-                cmd="cd {{job.ws}}; {} && {}".format(
+                cmd="cd {{job.ws}} ; {} && {}".format(
                     _grompp_str(self.root_directory(), name, gro, sys),
                     _mdrun_str(name)),
                 **kwargs)

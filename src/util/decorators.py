@@ -1,5 +1,6 @@
 import os
 
+
 def job_chdir(func):
     def func_wrapper(job, *args):
         cwd = os.getcwd()

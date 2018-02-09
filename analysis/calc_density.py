@@ -1,6 +1,7 @@
 import os
 
-from mtools.post_process import calc_density
+from src.util.util import calc_density
+from src.util.util import block_avg as ba
 import signac
 
 import matplotlib as mpl
@@ -44,12 +45,6 @@ for job in project.find_jobs():
         data = np.loadtxt(data_file)
         t = data[:, 0]
         rho = data[:, 1]
-
-        try:
-            import block_avg as ba
-        except ImportError:
-            ba = None
-            pass
 
         if ba:
             t_b, t_std = ba.block_avg(t, 50)

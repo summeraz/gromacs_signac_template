@@ -4,17 +4,12 @@ See [generic signac template](https://github.com/glotzerlab/signac-project-templ
 
 # Installation
 
-Install these packages:
-
-* [block_avg](https://github.com/tcmoore3/block_avg)
-* [mtools](https://github.com/mattwthompson/mtools)
-
-Install other dependencies:
+First, verify that each package in `requirements.txt` is installed. If not
+already installed, They should all be available via `pip`, `conda`, etc.
 
 ```
 python setup.py install
 ```
-
 
 # Get started:
 

@@ -48,7 +48,7 @@ python src/project.py status -d
 Analyze system (here, simple timeseries plots of density)
 
 ```
-python analysis/calc_density.py
+python src/analyze.py
 ```
 
 Look at the PDF file located in the ```workspace``` directory. It should look something like this:

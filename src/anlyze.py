@@ -25,7 +25,7 @@ for job in project.find_jobs():
     data_file = os.path.join(job.workspace(), 'rho.txt')
     img_file = os.path.join(job.workspace(), 'rho.pdf')
     if os.path.isfile(top_file) and os.path.isfile(trj_file):
-        trj = md.load(trj_file, top=top_file) 
+        trj = md.load(trj_file, top=top_file)
         rho = calc_density(trj, units='macro')
         data = np.vstack([trj.time, rho])
         np.savetxt(data_file,
@@ -52,12 +52,16 @@ for job in project.find_jobs():
         t_std = t_std.reshape(-1)
         rho_b = rho_b.reshape(-1)
         rho_std = rho_std.reshape(-1)
-        myline, = ax.plot(t_b, 
-            rho_b,
-            marker='o',
-            markersize=5,
-            label='C_{}'.format(job.statepoint()['C_n']))
-        ax.fill_between(t_b, rho_b-rho_std, rho_b+rho_std, alpha=0.2, facecolor=myline.get_color())
+        myline, = ax.plot(t_b,
+                          rho_b,
+                          marker='o',
+                          markersize=5,
+                          label='C_{}'.format(job.statepoint()['C_n']))
+        ax.fill_between(t_b,
+                        rho_b-rho_std,
+                        rho_b+rho_std,
+                        alpha=0.2,
+                        facecolor=myline.get_color())
 
 ax.set_xlabel('Simulation time (ps)')
 ax.set_ylabel('Density (kg/m^3)')

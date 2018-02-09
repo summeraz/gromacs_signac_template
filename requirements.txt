@@ -2,5 +2,5 @@ numpy
 signac
 mdtraj
 matplotlib
-flow
+signac-flow
 mbuild

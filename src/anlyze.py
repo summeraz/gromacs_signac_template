@@ -1,7 +1,7 @@
 import os
 
 from src.util.util import calc_density
-from src.util.util import block_avg as ba
+from src.util.util import block_avg
 import signac
 
 import matplotlib as mpl
@@ -46,8 +46,8 @@ for job in project.find_jobs():
         t = data[:, 0]
         rho = data[:, 1]
 
-        t_b, t_std = ba.block_avg(t, 50)
-        rho_b, rho_std = ba.block_avg(rho, 50)
+        t_b, t_std = block_avg(t, 50)
+        rho_b, rho_std = block_avg(rho, 50)
         t_b = t_b.reshape(-1)
         t_std = t_std.reshape(-1)
         rho_b = rho_b.reshape(-1)

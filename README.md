@@ -6,6 +6,7 @@ See [generic signac template](https://github.com/glotzerlab/signac-project-templ
 
 First, verify that each package in `requirements.txt` is installed. If not
 already installed, They should all be available via `pip`, `conda`, etc.
+The channels `mosdef` and `glotzer` or `conda-forge` are also required.
 
 ```
 python setup.py install

@@ -4,17 +4,13 @@ See [generic signac template](https://github.com/glotzerlab/signac-project-templ
 
 # Installation
 
-Install these packages:
-
-* [block_avg](https://github.com/tcmoore3/block_avg)
-* [mtools](https://github.com/mattwthompson/mtools)
-
-Install other dependencies:
+First, verify that each package in `requirements.txt` is installed. If not
+already installed, They should all be available via `pip`, `conda`, etc.
+The channels `mosdef` and `glotzer` or `conda-forge` are also required.
 
 ```
 python setup.py install
 ```
-
 
 # Get started:
 
@@ -48,7 +44,7 @@ python src/project.py status -d
 Analyze system (here, simple timeseries plots of density)
 
 ```
-python analysis/calc_density.py
+python src/analyze.py
 ```
 
 Look at the PDF file located in the ```workspace``` directory. It should look something like this:

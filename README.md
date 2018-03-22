@@ -2,6 +2,12 @@ Template for MoSDeF- and GROMACS-centric project managed with signac
 
 See [generic signac template](https://github.com/glotzerlab/signac-project-template) and [a fork](https://github.com/summeraz/monolayer_screening)
 
+# Versions
+
+`signac-flow` underwent significant changes from `0.4` to `0.5`. The master
+branch will support versions `0.5` and newer but an older branch (`flow-0.4`)
+will be maintained and support version `0.4`.
+
 # Installation
 
 First, verify that each package in `requirements.txt` is installed. If not

@@ -6,7 +6,7 @@ See [generic signac template](https://github.com/glotzerlab/signac-project-templ
 
 `signac-flow` underwent significant changes from `0.4` to `0.5`. The master
 branch will support versions `0.5` and newer but an older branch (`flow-0.4`)
-will be maintained and support version `0.4`.
+will be maintained to support version `0.4`.
 
 # Installation
 

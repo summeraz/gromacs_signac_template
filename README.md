@@ -49,10 +49,25 @@ python src/project.py status -d
 
 Analyze system (here, simple timeseries plots of density)
 
+The status of the project analysis can be examined via:
 ```
-python src/analyze.py
+python src/analysis.py status -d
 ```
 
-Look at the PDF file located in the ```workspace``` directory. It should look something like this:
+To submit the `calc_density` operation (which we will run locally) use:
+```
+python src/analysis.py run calc_density
+```
+
+This operation will write a density timeseries to a text file as well as
+a plot in each job's workspace.
+
+To compare the density of all jobs on a single plot, run the
+`plot_density.py` script in the `plotting` directory:
+```
+python plotting/plot_density.py
+```
+
+Look at the PDF file located in the `plotting` directory. It should look something like this:
 
 ![image](https://user-images.githubusercontent.com/7935382/28077533-a8a43f84-6627-11e7-9370-1206160d185d.png)
